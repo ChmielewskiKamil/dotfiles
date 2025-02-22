@@ -1,0 +1,13 @@
+-- Init.lua is run on startup as long as it is located under ~/.config/nvim 
+-- for Linux, BSD or macOS based systems. Other scripts run on startup
+-- must be placed in the plugin/ directory.
+-- The following line will source the files from lua/kchmielewski. This should
+-- setup the basic config. After this initialization nvim will proceed to 
+-- source the plugins (nvim looks for the "plugin" sub directory containing
+-- .lua files). Dirs ending in "after" will be skipped. This is where we will 
+-- call functions and configs that require plugins to be loaded before. Packages
+-- are loaded after plugins. Package is a dir that contains a plugin. This is 
+-- what I will be using with github submodules. Nvim looks for packages in the
+-- "pack/*/start/*" directories.
+--
+require("kchmielewski")
