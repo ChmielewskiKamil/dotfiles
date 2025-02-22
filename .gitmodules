@@ -1,3 +1,0 @@
-[submodule "nvim/site/pack/plugins/start/vim-nightfly-colors"]
-    path = nvim/site/pack/plugins/start/vim-nightfly-colors
-    url = https://github.com/bluz71/vim-nightfly-colors
