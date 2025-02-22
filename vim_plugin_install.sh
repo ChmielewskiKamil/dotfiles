@@ -20,7 +20,7 @@ fi
 repo="$1"
 # On linux you can use grep with --P flag.
 name="$(echo "$repo" | sed 's:.*/::')"  # Extract repo name without GNU grep
-plugin_path="/nvim/site/pack/plugins/start/$name"
+plugin_path="./nvim/site/pack/plugins/start/$name"
 
 mkdir -p "$(dirname "$plugin_path")"
 git submodule add -f "$repo" "$plugin_path"
