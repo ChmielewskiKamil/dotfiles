@@ -11,3 +11,4 @@
 -- "pack/*/start/*" directories.
 --
 require("kchmielewski")
+print("Hello from init.lua")
