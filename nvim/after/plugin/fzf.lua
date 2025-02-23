@@ -1,5 +1,5 @@
 local function build_fzf_native()
-    local plugin_path = vim.fn.stdpath("data") .. "/site/pack/git_submodules/start/telescope-fzf-native.nvim"
+    local plugin_path = vim.fn.stdpath("data") .. "/site/pack/plugins/start/telescope-fzf-native.nvim"
 
     if vim.fn.isdirectory(plugin_path) == 1 then
         vim.cmd("!make -C " .. plugin_path)
