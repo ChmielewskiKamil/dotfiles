@@ -22,8 +22,8 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- Leader + y or Y will paste into system clipboard.
 -- This means that you can quickly use two clipboards (vim and system).
-vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
+-- vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+-- vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- Delete to void register.
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
