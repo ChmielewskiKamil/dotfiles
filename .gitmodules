@@ -8,3 +8,6 @@
 	path = nvim/site/pack/plugins/start/telescope.nvim
 	url = https://github.com/nvim-telescope/telescope.nvim
     branch = 0.1.x
+[submodule "nvim/site/pack/plugins/start/telescope-fzf-native.nvim"]
+	path = nvim/site/pack/plugins/start/telescope-fzf-native.nvim
+	url = https://github.com/nvim-telescope/telescope-fzf-native.nvim
