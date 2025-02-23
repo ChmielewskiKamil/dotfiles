@@ -36,3 +36,6 @@ RUN mkdir -p /home/auditor/.config && ln -s /home/auditor/dotfiles/nvim /home/au
 # between the cloned submodules from the dotfiles to the actual config.
 RUN mkdir -p /home/auditor/.local/share/nvim/site/pack/plugins/start && \
     ln -s /home/auditor/dotfiles/nvim/site/pack/plugins/start/* /home/auditor/.local/share/nvim/site/pack/plugins/start/
+
+# Update tree sitter parsers and quit nvim
+RUN nvim --headless -c 'TSUpdate' -c 'q'
