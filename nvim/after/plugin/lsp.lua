@@ -4,8 +4,11 @@ require('mason-lspconfig').setup {
         'lua_ls',
         'rust_analyzer',
         'gopls',
-        'nomicfoundation-solidity-language-server'
+        'solidity_ls_nomicfoundation'
     }
 }
 
 local lspconfig = require('lspconfig')
+
+lspconfig.lua_ls.setup{}
+lspconfig.solidity_ls_nomicfoundation.setup{}
