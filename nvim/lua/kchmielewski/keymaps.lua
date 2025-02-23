@@ -52,10 +52,10 @@ end)
 
 -- Improved Terminal Navigation
 -- Instead of <C-w>h you can simply <C-h> to move to the left window.
-vim.keymap.set("n", "<C-h>", "<c-\\><c-n><c-w>h")
-vim.keymap.set("n", "<C-j>", "<c-\\><c-n><c-w>j")
-vim.keymap.set("n", "<C-k>", "<c-\\><c-n><c-w>k")
-vim.keymap.set("n", "<C-l>", "<c-\\><c-n><c-w>l")
+vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Telescope
 -- Search project files.
