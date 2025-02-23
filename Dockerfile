@@ -1,13 +1,14 @@
-# Stable debian cannot install nvim >0.7.0 because of the old lib C lib versions.
+# Stable debian cannot install nvim >0.7.0 because of the old C lib versions.
 # Lets hope trixie does not make oopsie woopsie.
 FROM debian:trixie
 
-# Install dependencies (basic system utilities)
+# Install dependencies (basic system utilities and zsh)
 RUN apt update && apt install -y \
     git \
     curl \
     ripgrep \
     build-essential \
+    unzip \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Neovim via appimage. This might eventually break in case there is 
@@ -17,13 +18,12 @@ RUN curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim-linu
     chmod u+x nvim-linux-arm64.appimage && ./nvim-linux-arm64.appimage --appimage-extract && \
     ln -s /squashfs-root/AppRun /usr/bin/nvim
 
-# Create a non-root user named auditor and switch to that user. The goal is to
-# reduce the priviledges.
-# TODO: Research ways to harden the container.
+# Create a non-root user named auditor and switch to that user.
 RUN useradd -m auditor
+# Change the default shell for the auditor user to zsh
 USER auditor
 
-# Pull the dotfiles from remote repo. The submodules must be cloned recursively
+# Pull the dotfiles from the remote repo. The submodules must be cloned recursively
 # since the neovim config uses them to store plugins.
 RUN git clone --recursive https://github.com/ChmielewskiKamil/dotfiles /home/auditor/dotfiles
 
