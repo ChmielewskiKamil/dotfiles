@@ -53,6 +53,4 @@ vim.opt.cmdheight = 0
 vim.opt.formatoptions = "jcroql"
 
 -- Use the same clipboard for system and nvim.
-vim.schedule(function()
-  vim.opt.clipboard = 'unnamedplus'
-end)
+vim.opt.clipboard = 'unnamedplus'
