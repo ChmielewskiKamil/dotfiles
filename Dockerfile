@@ -7,6 +7,7 @@ RUN apt update && apt install -y \
     git \
     curl \
     ripgrep \
+    build-essential \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Neovim via appimage. This might eventually break in case there is 
