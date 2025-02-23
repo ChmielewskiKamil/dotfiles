@@ -11,4 +11,6 @@ require('mason-lspconfig').setup {
 local lspconfig = require('lspconfig')
 
 lspconfig.lua_ls.setup{}
+lspconfig.gopls.setup{}
+lspconfig.rust_analyzer.setup{}
 lspconfig.solidity_ls_nomicfoundation.setup{}
