@@ -14,3 +14,6 @@
 [submodule "nvim/site/pack/plugins/start/nvim-treesitter"]
 	path = nvim/site/pack/plugins/start/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter
+[submodule "nvim/site/pack/plugins/start/undotree"]
+	path = nvim/site/pack/plugins/start/undotree
+	url = https://github.com/mbbill/undotree
