@@ -20,3 +20,6 @@
 [submodule "nvim/site/pack/plugins/start/nvim-lspconfig"]
 	path = nvim/site/pack/plugins/start/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig
+[submodule "nvim/site/pack/plugins/start/mason.nvim"]
+	path = nvim/site/pack/plugins/start/mason.nvim
+	url = https://github.com/williamboman/mason.nvim
